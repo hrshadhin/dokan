@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Play</title>
+    <style>
+        body {
+            background: rgb(30 144 255 / 73%);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #products table {
+            text-align: center;
+            border-collapse: collapse;
+
+        }
+
+        #products table thead tr {
+            background: dodgerblue;
+            font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        #products table tbody tr {
+            border-bottom: 1px solid #fff;
+
+        }
+
+    </style>
+</head>
+<body>
+<h1 class="center">Welcome to play</h1>
+{% if result %}
+    <h3 class="center"> Result: {{result}}</h3>
+{% endif %}
+{% if products %}
+    <div id="products">
+        <table>
+            <thead>
+            <tr>
+                <td>#</td>
+                <td>Name</td>
+                <td>Price</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{product.id}}</td>
+                <td>{{product.title}}</td>
+                <td>{{product.unit_price}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endif %}
+
+</body>
+</html>

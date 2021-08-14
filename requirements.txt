@@ -1,0 +1,4 @@
+Django>=3.2.6,<3.3
+django_debug_toolbar==3.2.1
+psycopg2>=2.8.6,<2.9
+uWSGI>=2.0.19.1,<2.1
