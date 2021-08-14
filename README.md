@@ -1,7 +1,8 @@
 # Dokan
 Django based online store app
 
-**N.B: Don't use it in production!!!**
+:exclamation: **Don't use it in production!!!** :exclamation:
+
 commands:
 ```bash
 docker-compose up
